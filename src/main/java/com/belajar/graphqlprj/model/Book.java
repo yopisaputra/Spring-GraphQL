@@ -2,8 +2,6 @@ package com.belajar.graphqlprj.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Book {
@@ -14,13 +12,7 @@ public class Book {
     private String name;
     private Integer pageCount;
     private Integer authorId;
-
-    public Book(Integer id, String name, Integer pageCount, Integer authorId) {
-        this.id = id;
-        this.name = name;
-        this.pageCount = pageCount;
-        this.authorId = authorId;
-    }
+    private Integer publisherId;
 
     public Book() {
 
@@ -56,5 +48,13 @@ public class Book {
 
     public void setAuthorId(Integer authorId) {
         this.authorId = authorId;
+    }
+
+    public Integer getPublisherId() {
+        return publisherId;
+    }
+
+    public void setPublisherId(Integer publisherId) {
+        this.publisherId = publisherId;
     }
 }

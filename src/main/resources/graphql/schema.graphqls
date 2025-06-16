@@ -2,17 +2,21 @@ type Query {
     books: [Book]
     bookById(id: Int): Book
     authors: [Author]
+    publisher: [Publisher]
 }
 
 type Mutation {
     addAuthor(id: Int, firstName: String, lastName: String): Author
-    addBook(id: Int, name: String, pageCount: Int, authorId: Int): Book
+    addBook(id: Int, name: String, pageCount: Int, authorId: Int, publisherId: Int): Book
+    addPublisher(id: Int, publisherName: String, city: String): Publisher
 
     updateBook(id: Int!, name: String, pageCount: Int, authorId: Int): Book
     updateAuthor(id: Int!, firstName: String, lastName: String): Author
+    updatePublisher(id: Int!, publisherName: String, city: String): Publisher
 
     deleteBook(id: Int!): Boolean
     deleteAuthor(id: Int!): Boolean
+    deletePublisher(id: Int!): Boolean
 }
 
 type Book {
@@ -20,10 +24,17 @@ type Book {
     name: String
     pageCount: Int
     author: Author
+    publisher: Publisher
 }
 
 type Author {
     id: ID
     firstName: String
     lastName: String
+}
+
+type Publisher {
+    id: ID
+    publisherName: String
+    city: String
 }
