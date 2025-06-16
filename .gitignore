@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Environment / Local Config ###
+.env
+application-local.properties
