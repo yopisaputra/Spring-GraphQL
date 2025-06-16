@@ -46,4 +46,3 @@ public class Publisher {
         this.city = city;
     }
 }
-
