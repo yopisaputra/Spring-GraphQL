@@ -17,5 +17,4 @@ public class GraphqlprjApplication {
 
         SpringApplication.run(GraphqlprjApplication.class, args);
     }
-
 }

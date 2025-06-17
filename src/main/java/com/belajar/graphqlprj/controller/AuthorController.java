@@ -62,5 +62,4 @@ public class AuthorController {
         authorRepository.deleteById(id);
         return true;
     }
-
 }

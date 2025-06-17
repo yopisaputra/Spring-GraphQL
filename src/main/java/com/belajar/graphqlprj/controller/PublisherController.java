@@ -29,8 +29,6 @@ public class PublisherController {
         return publisherRepository.findById(book.getAuthorId());
     }
 
-
-
     @MutationMapping
     public Publisher addPublisher(@Argument Integer id,
                                   @Argument String publisherName,

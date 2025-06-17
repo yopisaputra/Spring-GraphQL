@@ -2,7 +2,7 @@ type Query {
     books: [Book]
     bookById(id: Int): Book
     authors: [Author]
-    publisher: [Publisher]
+    publishers: [Publisher]
 }
 
 type Mutation {
@@ -10,7 +10,7 @@ type Mutation {
     addBook(id: Int, name: String, pageCount: Int, authorId: Int, publisherId: Int): Book
     addPublisher(id: Int, publisherName: String, city: String): Publisher
 
-    updateBook(id: Int!, name: String, pageCount: Int, authorId: Int): Book
+    updateBook(id: Int!, name: String, pageCount: Int, authorId: Int, publisherId: Int): Book
     updateAuthor(id: Int!, firstName: String, lastName: String): Author
     updatePublisher(id: Int!, publisherName: String, city: String): Publisher
 
